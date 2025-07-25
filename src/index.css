@@ -8,33 +8,45 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* Rapunzel Wedding Theme Colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 260 15% 25%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 260 15% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 260 15% 25%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Purple/Lavender Primary (Rapunzel's dress) */
+    --primary: 280 60% 55%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Light lavender secondary */
+    --secondary: 280 40% 92%;
+    --secondary-foreground: 260 15% 25%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Golden accent (lanterns) */
+    --accent: 45 95% 65%;
+    --accent-foreground: 260 15% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Muted lavender */
+    --muted: 280 30% 95%;
+    --muted-foreground: 260 10% 50%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 280 25% 88%;
+    --input: 280 25% 94%;
+    --ring: 280 60% 55%;
+
+    /* Custom wedding colors */
+    --lavender: 280 60% 85%;
+    --deep-purple: 280 70% 45%;
+    --golden: 45 95% 65%;
+    --golden-glow: 45 100% 75%;
+    --soft-white: 0 0% 98%;
 
     --radius: 0.5rem;
 
@@ -100,6 +112,46 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-gradient-to-b from-purple-50/50 via-white to-purple-50/30 text-foreground min-h-screen;
+    background-image: 
+      radial-gradient(circle at 20% 30%, hsl(var(--lavender) / 0.1) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, hsl(var(--golden) / 0.05) 0%, transparent 40%);
+  }
+}
+
+@layer components {
+  /* Magical floating animation for lanterns */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+  }
+  
+  @keyframes sparkle {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+  }
+  
+  .float-animation {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .sparkle-animation {
+    animation: sparkle 2s ease-in-out infinite;
+  }
+  
+  /* Custom gradient backgrounds */
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--deep-purple)));
+  }
+  
+  .gradient-golden {
+    background: linear-gradient(135deg, hsl(var(--golden)), hsl(var(--golden-glow)));
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }

@@ -52,6 +52,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Wedding theme colors
+				lavender: 'hsl(var(--lavender))',
+				'deep-purple': 'hsl(var(--deep-purple))',
+				golden: 'hsl(var(--golden))',
+				'golden-glow': 'hsl(var(--golden-glow))',
+				'soft-white': 'hsl(var(--soft-white))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
