@@ -39,11 +39,11 @@ const HeroSection = () => {
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
             <div className="flex items-center gap-3">
               <Calendar className="h-6 w-6 text-primary" />
-              <span className="text-xl font-semibold">26 de Novembro de 2026</span>
+              <span className="text-xl font-semibold">21 de Novembro de 2026</span>
             </div>
             <div className="flex items-center gap-3">
-              <MapPin className="h-6 w-6 text-primary" />
-              <span className="text-xl font-semibold">Em Breve</span>
+              <MapPin className="h-5 w-5 text-primary" />
+              <span className="text-lg font-semibold">Alameda dos Palmeiras, 26 - Residencial Iporã, Mariporã - SP</span>
             </div>
           </div>
           
@@ -65,9 +65,9 @@ const HeroSection = () => {
             variant="outline" 
             size="lg"
             className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300"
-            onClick={() => document.getElementById('story')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => document.getElementById('gifts')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Nossa História
+            Lista de Presentes
           </Button>
         </div>
       </div>

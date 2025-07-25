@@ -23,11 +23,11 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center justify-center gap-3">
                 <Calendar className="h-5 w-5 text-primary" />
-                <span className="font-semibold">26 de Novembro de 2026</span>
+                <span className="font-semibold">21 de Novembro de 2026</span>
               </div>
               <div className="flex items-center justify-center gap-3">
                 <MapPin className="h-5 w-5 text-primary" />
-                <span>Local em breve</span>
+                <span className="text-sm">Alameda dos Palmeiras, 26 - Residencial Iporã, Mariporã - SP</span>
               </div>
             </div>
           </div>
