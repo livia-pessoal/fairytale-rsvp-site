@@ -14,7 +14,216 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      "Lista de Convidados": {
+        Row: {
+          "Confirma��o": string | null
+          "Confirma��o_1": string | null
+          "Confirma��o_10": string | null
+          "Confirma��o_11": string | null
+          "Confirma��o_12": string | null
+          "Confirma��o_13": string | null
+          "Confirma��o_14": string | null
+          "Confirma��o_15": string | null
+          "Confirma��o_16": string | null
+          "Confirma��o_17": string | null
+          "Confirma��o_18": string | null
+          "Confirma��o_19": string | null
+          "Confirma��o_2": string | null
+          "Confirma��o_20": string | null
+          "Confirma��o_21": string | null
+          "Confirma��o_22": string | null
+          "Confirma��o_23": string | null
+          "Confirma��o_24": string | null
+          "Confirma��o_25": string | null
+          "Confirma��o_26": string | null
+          "Confirma��o_27": string | null
+          "Confirma��o_28": string | null
+          "Confirma��o_3": string | null
+          "Confirma��o_4": string | null
+          "Confirma��o_5": string | null
+          "Confirma��o_6": string | null
+          "Confirma��o_7": string | null
+          "Confirma��o_8": string | null
+          "Confirma��o_9": string | null
+          "Familia tia Maria": string | null
+          "Familia tia Miriam": string | null
+          "Fam�la Paulo": string | null
+          "Fam�lia Adriana": string | null
+          "Fam�lia Ana Julia": string | null
+          "Fam�lia Angela": string | null
+          "Fam�lia Auric�lia": string | null
+          "Fam�lia Breno": string | null
+          "Fam�lia Diana": string | null
+          "Fam�lia Edna": string | null
+          "Fam�lia Elaine": string | null
+          "Fam�lia Eliene": string | null
+          "Fam�lia Fl�via": string | null
+          "Fam�lia F�tima": string
+          "Fam�lia Geovanna B.": string | null
+          "Fam�lia Geovanna G.": string | null
+          "Fam�lia Gustavo": string | null
+          "Fam�lia J�nio": string | null
+          "Fam�lia Paula": string | null
+          "Fam�lia Ricardo": string | null
+          "Fam�lia Silvana": string | null
+          "Fam�lia Tauane": string | null
+          "Fam�lia Thamires": string | null
+          "Fam�lia tia Eliana": string | null
+          "Fam�lia tia Elisangela": string | null
+          "Fam�lia tia Letinha": string | null
+          "Fam�lia tia Neu�a": string | null
+          "Fam�lia tia Selma": string | null
+          "Fam�lia tia Tereza": string | null
+        }
+        Insert: {
+          "Confirma��o"?: string | null
+          "Confirma��o_1"?: string | null
+          "Confirma��o_10"?: string | null
+          "Confirma��o_11"?: string | null
+          "Confirma��o_12"?: string | null
+          "Confirma��o_13"?: string | null
+          "Confirma��o_14"?: string | null
+          "Confirma��o_15"?: string | null
+          "Confirma��o_16"?: string | null
+          "Confirma��o_17"?: string | null
+          "Confirma��o_18"?: string | null
+          "Confirma��o_19"?: string | null
+          "Confirma��o_2"?: string | null
+          "Confirma��o_20"?: string | null
+          "Confirma��o_21"?: string | null
+          "Confirma��o_22"?: string | null
+          "Confirma��o_23"?: string | null
+          "Confirma��o_24"?: string | null
+          "Confirma��o_25"?: string | null
+          "Confirma��o_26"?: string | null
+          "Confirma��o_27"?: string | null
+          "Confirma��o_28"?: string | null
+          "Confirma��o_3"?: string | null
+          "Confirma��o_4"?: string | null
+          "Confirma��o_5"?: string | null
+          "Confirma��o_6"?: string | null
+          "Confirma��o_7"?: string | null
+          "Confirma��o_8"?: string | null
+          "Confirma��o_9"?: string | null
+          "Familia tia Maria"?: string | null
+          "Familia tia Miriam"?: string | null
+          "Fam�la Paulo"?: string | null
+          "Fam�lia Adriana"?: string | null
+          "Fam�lia Ana Julia"?: string | null
+          "Fam�lia Angela"?: string | null
+          "Fam�lia Auric�lia"?: string | null
+          "Fam�lia Breno"?: string | null
+          "Fam�lia Diana"?: string | null
+          "Fam�lia Edna"?: string | null
+          "Fam�lia Elaine"?: string | null
+          "Fam�lia Eliene"?: string | null
+          "Fam�lia Fl�via"?: string | null
+          "Fam�lia F�tima": string
+          "Fam�lia Geovanna B."?: string | null
+          "Fam�lia Geovanna G."?: string | null
+          "Fam�lia Gustavo"?: string | null
+          "Fam�lia J�nio"?: string | null
+          "Fam�lia Paula"?: string | null
+          "Fam�lia Ricardo"?: string | null
+          "Fam�lia Silvana"?: string | null
+          "Fam�lia Tauane"?: string | null
+          "Fam�lia Thamires"?: string | null
+          "Fam�lia tia Eliana"?: string | null
+          "Fam�lia tia Elisangela"?: string | null
+          "Fam�lia tia Letinha"?: string | null
+          "Fam�lia tia Neu�a"?: string | null
+          "Fam�lia tia Selma"?: string | null
+          "Fam�lia tia Tereza"?: string | null
+        }
+        Update: {
+          "Confirma��o"?: string | null
+          "Confirma��o_1"?: string | null
+          "Confirma��o_10"?: string | null
+          "Confirma��o_11"?: string | null
+          "Confirma��o_12"?: string | null
+          "Confirma��o_13"?: string | null
+          "Confirma��o_14"?: string | null
+          "Confirma��o_15"?: string | null
+          "Confirma��o_16"?: string | null
+          "Confirma��o_17"?: string | null
+          "Confirma��o_18"?: string | null
+          "Confirma��o_19"?: string | null
+          "Confirma��o_2"?: string | null
+          "Confirma��o_20"?: string | null
+          "Confirma��o_21"?: string | null
+          "Confirma��o_22"?: string | null
+          "Confirma��o_23"?: string | null
+          "Confirma��o_24"?: string | null
+          "Confirma��o_25"?: string | null
+          "Confirma��o_26"?: string | null
+          "Confirma��o_27"?: string | null
+          "Confirma��o_28"?: string | null
+          "Confirma��o_3"?: string | null
+          "Confirma��o_4"?: string | null
+          "Confirma��o_5"?: string | null
+          "Confirma��o_6"?: string | null
+          "Confirma��o_7"?: string | null
+          "Confirma��o_8"?: string | null
+          "Confirma��o_9"?: string | null
+          "Familia tia Maria"?: string | null
+          "Familia tia Miriam"?: string | null
+          "Fam�la Paulo"?: string | null
+          "Fam�lia Adriana"?: string | null
+          "Fam�lia Ana Julia"?: string | null
+          "Fam�lia Angela"?: string | null
+          "Fam�lia Auric�lia"?: string | null
+          "Fam�lia Breno"?: string | null
+          "Fam�lia Diana"?: string | null
+          "Fam�lia Edna"?: string | null
+          "Fam�lia Elaine"?: string | null
+          "Fam�lia Eliene"?: string | null
+          "Fam�lia Fl�via"?: string | null
+          "Fam�lia F�tima"?: string
+          "Fam�lia Geovanna B."?: string | null
+          "Fam�lia Geovanna G."?: string | null
+          "Fam�lia Gustavo"?: string | null
+          "Fam�lia J�nio"?: string | null
+          "Fam�lia Paula"?: string | null
+          "Fam�lia Ricardo"?: string | null
+          "Fam�lia Silvana"?: string | null
+          "Fam�lia Tauane"?: string | null
+          "Fam�lia Thamires"?: string | null
+          "Fam�lia tia Eliana"?: string | null
+          "Fam�lia tia Elisangela"?: string | null
+          "Fam�lia tia Letinha"?: string | null
+          "Fam�lia tia Neu�a"?: string | null
+          "Fam�lia tia Selma"?: string | null
+          "Fam�lia tia Tereza"?: string | null
+        }
+        Relationships: []
+      }
+      rsvp_confirmations: {
+        Row: {
+          attending: boolean
+          created_at: string
+          email: string
+          id: string
+          name: string
+          updated_at: string
+        }
+        Insert: {
+          attending: boolean
+          created_at?: string
+          email: string
+          id?: string
+          name: string
+          updated_at?: string
+        }
+        Update: {
+          attending?: boolean
+          created_at?: string
+          email?: string
+          id?: string
+          name?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
