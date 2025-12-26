@@ -2,8 +2,13 @@
 import { createClient } from '@supabase/supabase-js';
 import type { Database } from './types';
 
+<<<<<<< HEAD
 const SUPABASE_URL = "https://ejliszzbuxgihworwxgg.supabase.co";
 const SUPABASE_PUBLISHABLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVqbGlzenpidXhnaWh3b3J3eGdnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTM0NTUyNzUsImV4cCI6MjA2OTAzMTI3NX0.Pz0og61Wih6K0EITtojJh3rhJeA9Z2yQgwhIlrmCHqs";
+=======
+const SUPABASE_URL = "https://rmeqcaagieyntgnejeul.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_jG6zUdRKOlsY7UIl_VZSnQ_X1G9ANGA";
+>>>>>>> 15f3aad (Site de casamento Giovana & Bruno)
 
 // Import the supabase client like this:
 // import { supabase } from "@/integrations/supabase/client";

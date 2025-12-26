@@ -43,7 +43,11 @@ const HeroSection = () => {
             </div>
             <div className="flex items-center gap-3">
               <MapPin className="h-5 w-5 text-primary" />
+<<<<<<< HEAD
               <span className="text-lg font-semibold">Alameda dos Palmeiras, 26 - Residencial Iporã, Mariporã - SP</span>
+=======
+              <span className="text-lg font-semibold">Mairiporã - SP</span>
+>>>>>>> 15f3aad (Site de casamento Giovana & Bruno)
             </div>
           </div>
           
@@ -53,7 +57,11 @@ const HeroSection = () => {
         </div>
 
         {/* CTA Buttons */}
+<<<<<<< HEAD
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
+=======
+        <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
+>>>>>>> 15f3aad (Site de casamento Giovana & Bruno)
           <Button 
             size="lg" 
             className="gradient-primary hover:scale-105 transition-all duration-300 px-8 py-6 text-lg font-semibold rounded-full shadow-lg"
@@ -69,6 +77,17 @@ const HeroSection = () => {
           >
             Lista de Presentes
           </Button>
+<<<<<<< HEAD
+=======
+          <Button 
+            variant="outline" 
+            size="lg"
+            className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300"
+            onClick={() => document.getElementById('guest-manual')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            Manual do Convidado
+          </Button>
+>>>>>>> 15f3aad (Site de casamento Giovana & Bruno)
         </div>
       </div>
     </section>

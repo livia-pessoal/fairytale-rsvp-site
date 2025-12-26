@@ -224,6 +224,39 @@ export type Database = {
         }
         Relationships: []
       }
+<<<<<<< HEAD
+=======
+      family_rsvp: {
+        Row: {
+          id: string
+          family_name: string
+          member_name: string
+          attending: boolean
+          responder_name: string | null
+          responder_contact: string | null
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          family_name: string
+          member_name: string
+          attending: boolean
+          responder_name?: string | null
+          responder_contact?: string | null
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          family_name?: string
+          member_name?: string
+          attending?: boolean
+          responder_name?: string | null
+          responder_contact?: string | null
+          created_at?: string
+        }
+        Relationships: []
+      }
+>>>>>>> 15f3aad (Site de casamento Giovana & Bruno)
     }
     Views: {
       [_ in never]: never
