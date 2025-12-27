@@ -27,11 +27,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center justify-center gap-3">
                 <MapPin className="h-5 w-5 text-primary" />
-<<<<<<< HEAD
-                <span className="text-sm">Alameda dos Palmeiras, 26 - Residencial Iporã, Mariporã - SP</span>
-=======
-                <span className="text-sm">Mairiporã - SP</span>
->>>>>>> 15f3aad (Site de casamento Giovana & Bruno)
+<span className="text-sm">Mairiporã - SP</span>
               </div>
             </div>
           </div>
@@ -41,21 +37,20 @@ const Footer = () => {
             <h3 className="text-xl font-bold text-primary mb-4">Contato</h3>
             <div className="space-y-3">
               <div className="flex items-center justify-center md:justify-end gap-3">
-<<<<<<< HEAD
                 <Mail className="h-5 w-5 text-primary" />
                 <span>contato@giovanabruno.com</span>
               </div>
               <div className="flex items-center justify-center md:justify-end gap-3">
                 <Phone className="h-5 w-5 text-primary" />
                 <span>(11) 99999-9999</span>
-=======
+              </div>
+              <div className="flex items-center justify-center md:justify-end gap-3">
                 <Phone className="h-5 w-5 text-primary" />
                 <span>Giovana: 11 98625-5309</span>
               </div>
               <div className="flex items-center justify-center md:justify-end gap-3">
                 <Phone className="h-5 w-5 text-primary" />
                 <span>Bruno: 11 99435-7949</span>
->>>>>>> 15f3aad (Site de casamento Giovana & Bruno)
               </div>
             </div>
           </div>

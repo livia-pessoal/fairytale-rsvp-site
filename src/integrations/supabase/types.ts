@@ -224,8 +224,6 @@ export type Database = {
         }
         Relationships: []
       }
-<<<<<<< HEAD
-=======
       family_rsvp: {
         Row: {
           id: string
