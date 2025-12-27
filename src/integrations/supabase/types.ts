@@ -254,8 +254,7 @@ export type Database = {
         }
         Relationships: []
       }
->>>>>>> 15f3aad (Site de casamento Giovana & Bruno)
-    }
+}
     Views: {
       [_ in never]: never
     }
