@@ -70,7 +70,6 @@ const Footer = () => {
         {/* Quote */}
         <div className="text-center mb-8">
           <blockquote className="text-xl md:text-2xl font-italic text-primary mb-2">
-<blockquote className="text-xl md:text-2xl font-italic text-primary mb-2">
             "- Rapunzel: E o que fazer quando você consegue realizar o seu maior sonho? - Flynn: Bom, essa é a melhor parte, você tem que encontrar um novo."
           </blockquote>
           <p className="text-muted-foreground">- Enrolados</p>
