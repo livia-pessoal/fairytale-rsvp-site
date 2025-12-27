@@ -44,7 +44,6 @@ interface RSVPData {
   name: string;
   contact: string;
   family: string;
->>>>>>> 15f3aad (Site de casamento Giovana & Bruno)
 }
 
 const RSVPSection = () => {
