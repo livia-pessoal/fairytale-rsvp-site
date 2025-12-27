@@ -8,12 +8,6 @@ import { Heart, Mail, User } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
-<<<<<<< HEAD
-interface RSVPData {
-  name: string;
-  email: string;
-  attending: string;
-=======
 const FAMILIES = [
   { name: "Família Fátima", members: ["Fátima"] },
   { name: "Família Tia Tereza", members: ["Tia Tereza", "Milena", "Dávila"] },
@@ -57,26 +51,17 @@ const RSVPSection = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState<RSVPData>({
     name: "",
-<<<<<<< HEAD
-    email: "",
-    attending: ""
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-=======
     contact: "",
     family: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [selectedFamily, setSelectedFamily] = useState<string>("");
   const [membersAttendance, setMembersAttendance] = useState<Record<string, "yes" | "no" | "">>({});
->>>>>>> 15f3aad (Site de casamento Giovana & Bruno)
 
   const handleInputChange = (field: keyof RSVPData, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-<<<<<<< HEAD
-=======
   const handleFamilyChange = (familyName: string) => {
     setSelectedFamily(familyName);
     setFormData(prev => ({ ...prev, family: familyName }));
@@ -100,22 +85,11 @@ const RSVPSection = () => {
     }));
   };
 
->>>>>>> 15f3aad (Site de casamento Giovana & Bruno)
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-<<<<<<< HEAD
-      // Insert RSVP into the database
-      const { error } = await supabase
-        .from('rsvp_confirmations')
-        .insert({
-          name: formData.name,
-          email: formData.email,
-          attending: formData.attending === 'yes'
-        });
-=======
       if (!selectedFamily) {
         toast({
           title: "Selecione uma família",
@@ -157,7 +131,6 @@ const RSVPSection = () => {
       const { error } = await supabase
         .from('family_rsvp')
         .insert(rows);
->>>>>>> 15f3aad (Site de casamento Giovana & Bruno)
 
       if (error) {
         throw error;
@@ -165,27 +138,17 @@ const RSVPSection = () => {
       
       toast({
         title: "Confirmação Recebida! 💜",
-<<<<<<< HEAD
-        description: `Obrigada, ${formData.name}! Sua confirmação foi registrada com sucesso.`,
-=======
         description: `Obrigada, ${formData.name}! A confirmação da sua família foi registrada com sucesso.`,
->>>>>>> 15f3aad (Site de casamento Giovana & Bruno)
       });
 
       // Reset form
       setFormData({
         name: "",
-<<<<<<< HEAD
-        email: "",
-        attending: ""
-      });
-=======
         contact: "",
         family: ""
       });
       setSelectedFamily("");
       setMembersAttendance({});
->>>>>>> 15f3aad (Site de casamento Giovana & Bruno)
 
     } catch (error) {
       toast({
@@ -240,58 +203,25 @@ const RSVPSection = () => {
                 />
               </div>
 
-<<<<<<< HEAD
-              {/* Email Field */}
-              <div className="space-y-2">
-                <Label htmlFor="email" className="text-lg font-semibold flex items-center gap-2">
-                  <Mail className="h-5 w-5 text-primary" />
-                  E-mail
-                </Label>
-                <Input
-                  id="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) => handleInputChange("email", e.target.value)}
-                  placeholder="seu@email.com"
-                  required
-=======
-              {/* Contact Number Field */}
+{/* Contact Field */}
               <div className="space-y-2">
                 <Label htmlFor="contact" className="text-lg font-semibold flex items-center gap-2">
                   <Mail className="h-5 w-5 text-primary" />
-                  Número para contato
+                  Contato (WhatsApp/Telefone)
                 </Label>
                 <Input
                   id="contact"
-                  type="tel"
                   value={formData.contact}
                   onChange={(e) => handleInputChange("contact", e.target.value)}
-                  placeholder="(11) 99999-9999"
->>>>>>> 15f3aad (Site de casamento Giovana & Bruno)
+                  placeholder="Digite seu WhatsApp ou telefone"
                   className="text-lg p-3 border-2 border-lavender/50 focus:border-primary"
                 />
               </div>
-
-<<<<<<< HEAD
-              {/* Attendance Confirmation */}
+                                                                    {/* Family Selection */}
               <div className="space-y-2">
-                <Label className="text-lg font-semibold flex items-center gap-2">
+                <Label htmlFor="family" className="text-lg font-semibold flex items-center gap-2">
                   <Heart className="h-5 w-5 text-primary" />
-                  Você irá comparecer?
-                </Label>
-                <Select value={formData.attending} onValueChange={(value) => handleInputChange("attending", value)} required>
-                  <SelectTrigger className="text-lg p-3 border-2 border-lavender/50 focus:border-primary">
-                    <SelectValue placeholder="Selecione uma opção" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="yes">Sim, estarei presente! 💜</SelectItem>
-                    <SelectItem value="no">Infelizmente não poderei comparecer 😔</SelectItem>
-=======
-              {/* Family Selection */}
-              <div className="space-y-2">
-                <Label className="text-lg font-semibold flex items-center gap-2">
-                  <Heart className="h-5 w-5 text-primary" />
-                  De qual família você faz parte?
+                  Sua Família
                 </Label>
                 <Select value={selectedFamily} onValueChange={handleFamilyChange} required>
                   <SelectTrigger className="text-lg p-3 border-2 border-lavender/50 focus:border-primary">
@@ -303,113 +233,48 @@ const RSVPSection = () => {
                         {family.name}
                       </SelectItem>
                     ))}
->>>>>>> 15f3aad (Site de casamento Giovana & Bruno)
                   </SelectContent>
                 </Select>
               </div>
 
-<<<<<<< HEAD
-=======
-              {/* Members Attendance */}
+              {/* Family Members Attendance */}
               {selectedFamily && (
-                <div className="space-y-4 mt-4">
-                  <p className="text-lg font-semibold">
-                    Confirme a presença de cada membro da família:
-                  </p>
-                  <div className="space-y-3">
+                <div className="space-y-4 p-4 bg-lavender/10 rounded-lg">
+                  <h4 className="text-lg font-semibold mb-3 text-primary">
+                    Marque a presença de cada membro da família:
+                  </h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {FAMILIES.find(f => f.name === selectedFamily)?.members.map((member) => (
-                      <div
-                        key={member}
-                        className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 border border-lavender/40 rounded-lg bg-white/60"
-                      >
-                        <span className="font-medium">{member}</span>
-                        <Select
-                          value={membersAttendance[member]}
-                          onValueChange={(value: "yes" | "no") => handleMemberAttendanceChange(member, value)}
-                          required
-                        >
-                          <SelectTrigger className="w-full sm:w-48 border-2 border-lavender/50 focus:border-primary">
-                            <SelectValue placeholder="Sim ou Não" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="yes">Sim 💜</SelectItem>
-                            <SelectItem value="no">Não 😔</SelectItem>
-                          </SelectContent>
-                        </Select>
+                      <div key={member} className="flex items-center gap-2">
+                        <Label className="text-sm font-medium">{member}</Label>
+                        <div className="flex gap-2">
+                          <Button
+                            type="button"
+                            variant={membersAttendance[member] === "yes" ? "default" : "outline"}
+                            size="sm"
+                            onClick={() => handleMemberAttendanceChange(member, "yes")}
+                            className="px-3 py-1"
+                          >
+                            Sim
+                          </Button>
+                          <Button
+                            type="button"
+                            variant={membersAttendance[member] === "no" ? "default" : "outline"}
+                            size="sm"
+                            onClick={() => handleMemberAttendanceChange(member, "no")}
+                            className="px-3 py-1"
+                          >
+                            Não
+                          </Button>
+                        </div>
                       </div>
                     ))}
                   </div>
                 </div>
               )}
-
->>>>>>> 15f3aad (Site de casamento Giovana & Bruno)
-
-              {/* Submit Button */}
-              <Button 
-                type="submit" 
-                className="w-full text-xl p-6 gradient-primary hover:scale-105 transition-all duration-300 font-bold rounded-full shadow-lg"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? "Enviando..." : "Confirmar Presença ✨"}
-              </Button>
             </form>
           </CardContent>
         </Card>
-
-<<<<<<< HEAD
-        {/* Additional Info */}
-        <div className="text-center mt-8">
-          <p className="text-lg text-muted-foreground">
-            Dúvidas? Entre em contato conosco! 💌
-          </p>
-=======
-        {/* Guest Manual */}
-        <div id="guest-manual" className="mt-10">
-          <Card className="shadow-xl border-2 border-lavender/30 bg-white/95 backdrop-blur-sm">
-            <CardHeader className="text-center pb-4">
-              <CardTitle className="text-2xl font-bold text-primary flex items-center justify-center gap-2">
-                <Heart className="h-5 w-5 text-primary" />
-                Manual do Convidado
-                <Heart className="h-5 w-5 text-primary" />
-              </CardTitle>
-              <CardDescription className="text-base">
-                Algumas orientações com todo carinho para que nossa cerimônia seja ainda mais especial ✨
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4 text-left text-muted-foreground text-base leading-relaxed">
-              <div>
-                <p className="font-semibold text-foreground mb-1">Tipo de traje</p>
-                <p>Traje: <span className="font-semibold">sport fino</span>.</p>
-              </div>
-
-              <div>
-                <p className="font-semibold text-foreground mb-1">Cores não recomendadas</p>
-                <p>
-                  Para manter a harmonia das fotos e da decoração, pedimos que evitem as cores:
-                  <span className="font-semibold"> Branco, Off White, Bege, Creme, Roxo, Lilás, Prata e Dourado</span>.
-                </p>
-              </div>
-
-              <div>
-                <p className="font-semibold text-foreground mb-1">Durante a cerimônia</p>
-                <ul className="list-disc list-inside space-y-1">
-                  <li>O uso de celular não é recomendado durante a cerimônia.</li>
-                  <li>Por favor, não leve itens de decoração próprios.</li>
-                  <li>Evite ficar na frente ou ao lado dos fotógrafos e cinegrafistas.</li>
-                </ul>
-              </div>
-
-              <div>
-                <p className="font-semibold text-foreground mb-1">Crianças</p>
-                <p>
-                  Teremos uma <span className="font-semibold">área kids com monitoria</span> preparada com carinho para acolher as crianças
-                  com segurança enquanto todos aproveitam a festa.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
->>>>>>> 15f3aad (Site de casamento Giovana & Bruno)
-        </div>
       </div>
     </section>
   );
