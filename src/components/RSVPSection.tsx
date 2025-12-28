@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Heart, Mail, User } from "lucide-react";
+import { Heart, Mail, User, MapPin, Calendar, Clock, Gift } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -56,6 +56,7 @@ const RSVPSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [selectedFamily, setSelectedFamily] = useState<string>("");
   const [membersAttendance, setMembersAttendance] = useState<Record<string, "yes" | "no" | "">>({});
+  const [showGuestManual, setShowGuestManual] = useState(false);
 
   const handleInputChange = (field: keyof RSVPData, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
@@ -242,36 +243,152 @@ const RSVPSection = () => {
                   <h4 className="text-lg font-semibold mb-3 text-primary">
                     Marque a presença de cada membro da família:
                   </h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 gap-3">
                     {FAMILIES.find(f => f.name === selectedFamily)?.members.map((member) => (
-                      <div key={member} className="flex items-center gap-2">
+                      <div key={member} className="flex flex-col space-y-2">
                         <Label className="text-sm font-medium">{member}</Label>
-                        <div className="flex gap-2">
-                          <Button
-                            type="button"
-                            variant={membersAttendance[member] === "yes" ? "default" : "outline"}
-                            size="sm"
-                            onClick={() => handleMemberAttendanceChange(member, "yes")}
-                            className="px-3 py-1"
-                          >
-                            Sim
-                          </Button>
-                          <Button
-                            type="button"
-                            variant={membersAttendance[member] === "no" ? "default" : "outline"}
-                            size="sm"
-                            onClick={() => handleMemberAttendanceChange(member, "no")}
-                            className="px-3 py-1"
-                          >
-                            Não
-                          </Button>
-                        </div>
+                        <Select
+                          value={membersAttendance[member] || ""}
+                          onValueChange={(value: "yes" | "no") => handleMemberAttendanceChange(member, value)}
+                          required
+                        >
+                          <SelectTrigger className="w-full">
+                            <SelectValue placeholder="Confirmar presença" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="yes">Sim, estarei presente</SelectItem>
+                            <SelectItem value="no">Não poderei comparecer</SelectItem>
+                          </SelectContent>
+                        </Select>
                       </div>
                     ))}
                   </div>
                 </div>
               )}
+
+              {/* Submit Button */}
+              <Button 
+                type="submit" 
+                className="w-full bg-primary hover:bg-primary/90 text-white py-6 text-lg"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? (
+                  <span className="flex items-center gap-2">
+                    <svg className="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Enviando...
+                  </span>
+                ) : (
+                  <span className="flex items-center gap-2">
+                    <Heart className="h-5 w-5" />
+                    Confirmar Presença
+                  </span>
+                )}
+              </Button>
             </form>
+          </CardContent>
+        </Card>
+
+        {/* Manual do Convidado */}
+        <Card className="shadow-2xl border-2 border-lavender/30 bg-white/95 backdrop-blur-sm mt-8">
+          <CardHeader className="text-center pb-6">
+            <CardTitle className="text-3xl font-bold text-primary">Manual do Convidado</CardTitle>
+            <CardDescription className="text-lg">
+              Tudo o que você precisa saber sobre o nosso grande dia!
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <Calendar className="h-6 w-6 text-primary mt-1" />
+                <div>
+                  <h3 className="font-semibold text-lg">Data e Horário</h3>
+                  <p className="text-muted-foreground">
+                    26 de Novembro de 2026 às 16h
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <MapPin className="h-6 w-6 text-primary mt-1" />
+                <div>
+                  <h3 className="font-semibold text-lg">Localização</h3>
+                  <p className="text-muted-foreground">
+                    Chácara Recanto da Paz
+                    <br />
+                    Estrada dos Pinheiros, 1234
+                    <br />
+                    Mairiporã - SP
+                  </p>
+                  <Button
+                    variant="link"
+                    className="p-0 h-auto text-foreground mt-2"
+                    onClick={() =>
+                      window.open(
+                        "https://maps.app.goo.gl/example",
+                        "_blank"
+                      )
+                    }
+                  >
+                    <MapPin className="h-4 w-4 mr-1" />
+                    Ver no mapa
+                  </Button>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <Clock className="h-6 w-6 text-primary mt-1" />
+                <div>
+                  <h3 className="font-semibold text-lg">Dress Code</h3>
+                  <p className="text-muted-foreground">
+                    Traje esporte fino (sugestão de cores: tons pastéis e neutros)
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <Gift className="h-6 w-6 text-primary mt-1" />
+                <div>
+                  <h3 className="font-semibold text-lg">Presentes</h3>
+                  <p className="text-muted-foreground">
+                    Sua presença é o nosso maior presente! Mas se desejar nos presentear, confira nossa lista de presentes.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <Button
+              variant="outline"
+              className="w-full mt-6"
+              onClick={() => setShowGuestManual(!showGuestManual)}
+            >
+              {showGuestManual ? "Menos detalhes" : "Mais informações"}
+            </Button>
+
+            {showGuestManual && (
+              <div className="mt-4 space-y-4 pt-4 border-t">
+                <div>
+                  <h3 className="font-semibold">Estacionamento</h3>
+                  <p className="text-muted-foreground">
+                    Estacionamento disponível no local
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold">Confirmação</h3>
+                  <p className="text-muted-foreground">
+                    Por favor, confirme sua presença até 30 de outubro de 2026.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold">Contato</h3>
+                  <p className="text-muted-foreground">
+                    Para dúvidas, entre em contato: (11) 99999-9999
+                  </p>
+                </div>
+              </div>
+            )}
           </CardContent>
         </Card>
       </div>
