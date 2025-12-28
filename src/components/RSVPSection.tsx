@@ -291,104 +291,35 @@ const RSVPSection = () => {
           </CardContent>
         </Card>
 
-        {/* Manual do Convidado */}
+                {/* Manual do Convidado */}
         <Card className="shadow-2xl border-2 border-lavender/30 bg-white/95 backdrop-blur-sm mt-8">
           <CardHeader className="text-center pb-6">
             <CardTitle className="text-3xl font-bold text-primary">Manual do Convidado</CardTitle>
             <CardDescription className="text-lg">
-              Tudo o que você precisa saber sobre o nosso grande dia!
+              Algumas dicas especiais para tornar nosso dia ainda mais mágico!
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <Calendar className="h-6 w-6 text-primary mt-1" />
-                <div>
-                  <h3 className="font-semibold text-lg">Data e Horário</h3>
-                  <p className="text-muted-foreground">
-                    26 de Novembro de 2026 às 16h
-                  </p>
-                </div>
+              <div className="bg-lavender/10 p-4 rounded-lg">
+                <h3 className="font-semibold text-lg mb-2 text-primary">Traje</h3>
+                <p className="text-gray-700">Sport fino</p>
               </div>
-
-              <div className="flex items-start gap-4">
-                <MapPin className="h-6 w-6 text-primary mt-1" />
-                <div>
-                  <h3 className="font-semibold text-lg">Localização</h3>
-                  <p className="text-muted-foreground">
-                    Chácara Recanto da Paz
-                    <br />
-                    Estrada dos Pinheiros, 1234
-                    <br />
-                    Mairiporã - SP
-                  </p>
-                  <Button
-                    variant="link"
-                    className="p-0 h-auto text-foreground mt-2"
-                    onClick={() =>
-                      window.open(
-                        "https://maps.app.goo.gl/example",
-                        "_blank"
-                      )
-                    }
-                  >
-                    <MapPin className="h-4 w-4 mr-1" />
-                    Ver no mapa
-                  </Button>
-                </div>
+              
+              <div className="bg-lavender/10 p-4 rounded-lg">
+                <h3 className="font-semibold text-lg mb-2 text-primary">Cores não recomendadas</h3>
+                <p className="text-gray-700">Branco, Off White, Bege, Creme, Roxo, Lilás, Prata e Dourado</p>
               </div>
-
-              <div className="flex items-start gap-4">
-                <Clock className="h-6 w-6 text-primary mt-1" />
-                <div>
-                  <h3 className="font-semibold text-lg">Dress Code</h3>
-                  <p className="text-muted-foreground">
-                    Traje esporte fino (sugestão de cores: tons pastéis e neutros)
-                  </p>
-                </div>
+              
+              <div className="bg-lavender/10 p-4 rounded-lg">
+                <h3 className="font-semibold text-lg mb-2 text-primary">Durante a cerimônia</h3>
+                <p className="text-gray-700">Uso de celular não recomendado, não levar decoração e não atrapalhar os fotógrafos</p>
               </div>
-
-              <div className="flex items-start gap-4">
-                <Gift className="h-6 w-6 text-primary mt-1" />
-                <div>
-                  <h3 className="font-semibold text-lg">Presentes</h3>
-                  <p className="text-muted-foreground">
-                    Sua presença é o nosso maior presente! Mas se desejar nos presentear, confira nossa lista de presentes.
-                  </p>
-                </div>
+              
+              <div className="bg-lavender/10 p-4 rounded-lg">
+                <h3 className="font-semibold text-lg mb-2 text-primary">Para as crianças</h3>
+                <p className="text-gray-700">Haverá área kids com monitor para divertir os pequenos!</p>
               </div>
             </div>
-
-            <Button
-              variant="outline"
-              className="w-full mt-6"
-              onClick={() => setShowGuestManual(!showGuestManual)}
-            >
-              {showGuestManual ? "Menos detalhes" : "Mais informações"}
-            </Button>
-
-            {showGuestManual && (
-              <div className="mt-4 space-y-4 pt-4 border-t">
-                <div>
-                  <h3 className="font-semibold">Estacionamento</h3>
-                  <p className="text-muted-foreground">
-                    Estacionamento disponível no local
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-semibold">Confirmação</h3>
-                  <p className="text-muted-foreground">
-                    Por favor, confirme sua presença até 30 de outubro de 2026.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-semibold">Contato</h3>
-                  <p className="text-muted-foreground">
-                    Para dúvidas, entre em contato: (11) 99999-9999
-                  </p>
-                </div>
-              </div>
-            )}
           </CardContent>
         </Card>
       </div>
