@@ -300,6 +300,7 @@ const RSVPSection = () => {
             </CardDescription>
           </CardHeader>
           <CardContent>
+            <div className="space-y-4">
               <div className="bg-lavender/10 p-4 rounded-lg">
                 <h3 className="font-semibold text-lg mb-2 text-primary">Traje</h3>
                 <p className="text-gray-700">Sport fino</p>
