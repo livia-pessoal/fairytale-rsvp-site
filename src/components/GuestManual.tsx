@@ -4,44 +4,37 @@ const GuestManual = () => {
   return (
     <Card className="shadow-2xl border-2 border-lavender/30 bg-white/95 backdrop-blur-sm mt-8">
       <CardHeader className="text-center pb-6">
-        <CardTitle className="text-3xl font-bold text-primary">Manual do Convidado</CardTitle>
-        <CardDescription className="text-lg">
-          Algumas dicas especiais para tornar nosso dia ainda mais mágico!
+        <CardTitle className="text-2xl font-bold text-primary">Manual do Convidado</CardTitle>
+        <CardDescription>
+          Algumas dicas importantes para nosso dia especial!
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="space-y-4">
-          <div className="bg-lavender/10 p-4 rounded-lg">
-            <h3 className="font-semibold text-lg mb-2 text-primary">✨ Traje Sugerido</h3>
-            <p className="text-gray-700">
-              Sugerimos traje <strong>sport fino</strong> para que todos se sintam confortáveis e elegantes em nossa celebração!
+        <div className="space-y-3">
+          <div className="bg-lavender/10 p-3 rounded-lg">
+            <h3 className="font-semibold mb-1 text-primary">Traje Sugerido</h3>
+            <p className="text-sm text-gray-700">Sport fino</p>
+          </div>
+          
+          <div className="bg-lavender/10 p-3 rounded-lg">
+            <h3 className="font-semibold mb-1 text-primary">Cores Reservadas</h3>
+            <p className="text-sm text-gray-700">
+              Para preservar a harmonia das cores, pedimos que evitem: <strong>Branco, Off White, Bege, Creme, Roxo, Lilás, Prata e Dourado</strong>.
             </p>
           </div>
           
-          <div className="bg-lavender/10 p-4 rounded-lg">
-            <h3 className="font-semibold text-lg mb-2 text-primary">🎨 Cores Reservadas</h3>
-            <p className="text-gray-700">
-              Para preservar a harmonia da paleta de cores do nosso casamento, pedimos gentilmente que evitem: 
-              <strong> Branco, Off White, Bege, Creme, Roxo, Lilás, Prata e Dourado</strong>. 
-              Essas cores fazem parte da decoração e do visual dos noivos. Agradecemos a compreensão! 💜
+          <div className="bg-lavender/10 p-3 rounded-lg">
+            <h3 className="font-semibold mb-1 text-primary">Durante a Cerimônia</h3>
+            <p className="text-sm text-gray-700">
+              Pedimos que evitem o uso de celulares durante a cerimônia. Os flashs podem atrapalhar os fotógrafos e cobrir rostos nas fotos. 
+              Nossos profissionais estarão registrando tudo para compartilhar com vocês depois. Por favor, não levem decoração própria.
             </p>
           </div>
           
-          <div className="bg-lavender/10 p-4 rounded-lg">
-            <h3 className="font-semibold text-lg mb-2 text-primary">📸 Durante a Cerimônia</h3>
-            <p className="text-gray-700">
-              Para que todos possam aproveitar cada momento mágico, pedimos que evitem o uso de celulares durante a cerimônia. 
-              Nossos fotógrafos profissionais estarão capturando cada detalhe especial para compartilharmos com vocês depois! 
-              Por favor, não levem decoração própria e ajudem-nos a não atrapalhar o trabalho dos fotógrafos. 
-              Assim todos terão lindas lembranças desse dia! 📷✨
-            </p>
-          </div>
-          
-          <div className="bg-lavender/10 p-4 rounded-lg">
-            <h3 className="font-semibold text-lg mb-2 text-primary">👶 Espaço Kids</h3>
-            <p className="text-gray-700">
-              Preparamos uma <strong>área kids especial com monitor</strong> para que as crianças se divirtam com segurança 
-              enquanto os adultos aproveitam a festa! Os pequenos terão um espaço mágico só deles! 🎈
+          <div className="bg-lavender/10 p-3 rounded-lg">
+            <h3 className="font-semibold mb-1 text-primary">Espaço Kids</h3>
+            <p className="text-sm text-gray-700">
+              Haverá área kids com monitor para as crianças.
             </p>
           </div>
         </div>
