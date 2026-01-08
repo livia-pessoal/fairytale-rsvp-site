@@ -7,6 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Heart, Mail, User, MapPin, Calendar, Clock, Gift } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import GuestManual from "./GuestManual";
 
 const FAMILIES = [
   { name: "Família Fátima", members: ["Fátima"] },
@@ -291,38 +292,8 @@ const RSVPSection = () => {
           </CardContent>
         </Card>
 
-                {/* Manual do Convidado */}
-        <Card className="shadow-2xl border-2 border-lavender/30 bg-white/95 backdrop-blur-sm mt-8">
-          <CardHeader className="text-center pb-6">
-            <CardTitle className="text-3xl font-bold text-primary">Manual do Convidado</CardTitle>
-            <CardDescription className="text-lg">
-              Algumas dicas especiais para tornar nosso dia ainda mais mágico!
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-4">
-              <div className="bg-lavender/10 p-4 rounded-lg">
-                <h3 className="font-semibold text-lg mb-2 text-primary">Traje</h3>
-                <p className="text-gray-700">Sport fino</p>
-              </div>
-              
-              <div className="bg-lavender/10 p-4 rounded-lg">
-                <h3 className="font-semibold text-lg mb-2 text-primary">Cores não recomendadas</h3>
-                <p className="text-gray-700">Branco, Off White, Bege, Creme, Roxo, Lilás, Prata e Dourado</p>
-              </div>
-              
-              <div className="bg-lavender/10 p-4 rounded-lg">
-                <h3 className="font-semibold text-lg mb-2 text-primary">Durante a cerimônia</h3>
-                <p className="text-gray-700">Uso de celular não recomendado, não levar decoração e não atrapalhar os fotógrafos</p>
-              </div>
-              
-              <div className="bg-lavender/10 p-4 rounded-lg">
-                <h3 className="font-semibold text-lg mb-2 text-primary">Para as crianças</h3>
-                <p className="text-gray-700">Haverá área kids com monitor para divertir os pequenos!</p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+        {/* Manual do Convidado */}
+        <GuestManual />
       </div>
     </section>
   );
