@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 const GuestManual = () => {
   return (
-    <Card className="shadow-2xl border-2 border-lavender/30 bg-white/95 backdrop-blur-sm mt-8">
+    <Card id="guest-manual" className="shadow-2xl border-2 border-lavender/30 bg-white/95 backdrop-blur-sm mt-8">
       <CardHeader className="text-center pb-6">
         <CardTitle className="text-2xl font-bold text-primary">Dicas para o Nosso Grande Dia</CardTitle>
         <CardDescription>

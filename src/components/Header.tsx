@@ -17,17 +17,17 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo/Names */}
           <div className="flex items-center space-x-2">
-            <Heart className="h-6 w-6 text-primary sparkle-animation" />
-            <span className="text-xl font-bold text-gradient">Giovana & Bruno</span>
+            <Heart className="h-5 w-5 sm:h-6 sm:w-6 text-primary sparkle-animation" />
+            <span className="text-lg sm:text-xl font-bold text-gradient">Giovana & Bruno</span>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+                className="text-sm lg:text-base text-foreground hover:text-primary transition-colors duration-300 font-medium whitespace-nowrap"
               >
                 {item.label}
               </a>
@@ -53,7 +53,7 @@ const Header = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+                  className="text-base text-foreground hover:text-primary transition-colors duration-300 font-medium text-center py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}

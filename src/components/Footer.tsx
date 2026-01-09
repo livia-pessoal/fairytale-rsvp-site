@@ -7,11 +7,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {/* Couple Info */}
           <div className="text-center md:text-left">
-            <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
-              <Heart className="h-6 w-6 text-primary sparkle-animation" />
-              <h3 className="text-2xl font-bold text-gradient">Giovana & Bruno</h3>
+            <div className="flex items-center justify-center md:justify-start gap-2 sm:gap-3 mb-4">
+              <Heart className="h-5 w-5 sm:h-6 sm:w-6 text-primary sparkle-animation" />
+              <h3 className="text-xl sm:text-2xl font-bold text-gradient">Giovana & Bruno</h3>
             </div>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed px-2 md:px-0">
               Celebrando nosso amor com as pessoas mais especiais das nossas vidas. 
               Obrigada por fazer parte da nossa história!
             </p>
@@ -19,38 +19,30 @@ const Footer = () => {
 
           {/* Wedding Details */}
           <div className="text-center">
-            <h3 className="text-xl font-bold text-primary mb-4">Detalhes do Casamento</h3>
+            <h3 className="text-lg sm:text-xl font-bold text-primary mb-4">Detalhes do Casamento</h3>
             <div className="space-y-3">
-              <div className="flex items-center justify-center gap-3">
-                <Calendar className="h-5 w-5 text-primary" />
-                <span className="font-semibold">21 de Novembro de 2026</span>
+              <div className="flex items-center justify-center gap-2 sm:gap-3">
+                <Calendar className="h-4 w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
+                <span className="text-sm sm:text-base font-semibold">21 de Novembro de 2026</span>
               </div>
-              <div className="flex items-center justify-center gap-3">
-                <MapPin className="h-5 w-5 text-primary" />
-<span className="text-sm">Mairiporã - SP</span>
+              <div className="flex items-center justify-center gap-2 sm:gap-3">
+                <MapPin className="h-4 w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
+                <span className="text-sm sm:text-base">Mairiporã - SP</span>
               </div>
             </div>
           </div>
 
           {/* Contact */}
           <div className="text-center md:text-right">
-            <h3 className="text-xl font-bold text-primary mb-4">Contato</h3>
+            <h3 className="text-lg sm:text-xl font-bold text-primary mb-4">Contato</h3>
             <div className="space-y-3">
-              <div className="flex items-center justify-center md:justify-end gap-3">
-                <Mail className="h-5 w-5 text-primary" />
-                <span>contato@giovanabruno.com</span>
+              <div className="flex items-center justify-center md:justify-end gap-2 sm:gap-3">
+                <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
+                <span className="text-sm sm:text-base">Giovana: 11 98625-5309</span>
               </div>
-              <div className="flex items-center justify-center md:justify-end gap-3">
-                <Phone className="h-5 w-5 text-primary" />
-                <span>(11) 99999-9999</span>
-              </div>
-              <div className="flex items-center justify-center md:justify-end gap-3">
-                <Phone className="h-5 w-5 text-primary" />
-                <span>Giovana: 11 98625-5309</span>
-              </div>
-              <div className="flex items-center justify-center md:justify-end gap-3">
-                <Phone className="h-5 w-5 text-primary" />
-                <span>Bruno: 11 99435-7949</span>
+              <div className="flex items-center justify-center md:justify-end gap-2 sm:gap-3">
+                <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
+                <span className="text-sm sm:text-base">Bruno: 11 99435-7949</span>
               </div>
             </div>
           </div>
@@ -68,20 +60,17 @@ const Footer = () => {
         </div>
 
         {/* Quote */}
-        <div className="text-center mb-8">
-          <blockquote className="text-xl md:text-2xl font-italic text-primary mb-2">
+        <div className="text-center mb-8 px-4">
+          <blockquote className="text-base sm:text-lg md:text-xl lg:text-2xl font-italic text-primary mb-2">
             "- Rapunzel: E o que fazer quando você consegue realizar o seu maior sonho? - Flynn: Bom, essa é a melhor parte, você tem que encontrar um novo."
           </blockquote>
-          <p className="text-muted-foreground">- Enrolados</p>
+          <p className="text-sm sm:text-base text-muted-foreground">- Enrolados</p>
         </div>
 
         {/* Copyright */}
-        <div className="text-center pt-8 border-t border-lavender/30">
-          <p className="text-muted-foreground">
+        <div className="text-center pt-8 border-t border-lavender/30 px-4">
+          <p className="text-sm sm:text-base text-muted-foreground">
             © 2026 Giovana & Bruno. Feito com 💜 para nosso dia especial.
-          </p>
-          <p className="text-sm text-muted-foreground mt-2">
-            Inspirado no amor verdadeiro de Rapunzel e Flynn ✨
           </p>
         </div>
       </div>

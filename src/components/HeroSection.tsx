@@ -26,36 +26,36 @@ const HeroSection = () => {
       {/* Main Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-6xl md:text-8xl font-bold text-gradient mb-4">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold text-gradient mb-4">
             Giovana <span className="text-golden">&</span> Bruno
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-6">
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6 px-2">
             Nosso Felizes Para Sempre Começa Aqui
           </p>
         </div>
 
         {/* Wedding Date & Venue */}
-        <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 mb-8 shadow-lg border border-lavender/30">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
-            <div className="flex items-center gap-3">
-              <Calendar className="h-6 w-6 text-primary" />
-              <span className="text-xl font-semibold">21 de Novembro de 2026</span>
+        <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 mb-8 shadow-lg border border-lavender/30">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 mb-4 md:mb-6">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <Calendar className="h-5 w-5 sm:h-6 sm:w-6 text-primary flex-shrink-0" />
+              <span className="text-base sm:text-lg md:text-xl font-semibold text-center">21 de Novembro de 2026</span>
             </div>
-            <div className="flex items-center gap-3">
-              <MapPin className="h-5 w-5 text-primary" />
-<span className="text-lg font-semibold">Mairiporã - SP</span>
+            <div className="flex items-center gap-2 sm:gap-3">
+              <MapPin className="h-4 w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
+              <span className="text-sm sm:text-base md:text-lg font-semibold">Mairiporã - SP</span>
             </div>
           </div>
           
-          <p className="text-lg text-muted-foreground italic">
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground italic px-2">
             "Porque o amor verdadeiro não tem fim, como as luzes das lanternas que iluminam nosso caminho."
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center flex-wrap px-2">
           <Button 
             size="lg" 
-            className="gradient-primary hover:scale-105 transition-all duration-300 px-8 py-6 text-lg font-semibold rounded-full shadow-lg"
+            className="gradient-primary hover:scale-105 transition-all duration-300 px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold rounded-full shadow-lg w-full sm:w-auto"
             onClick={() => document.getElementById('rsvp')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Confirmar Presença
@@ -63,18 +63,18 @@ const HeroSection = () => {
           <Button 
             variant="outline" 
             size="lg"
-            className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300"
-            onClick={() => document.getElementById('gifts')?.scrollIntoView({ behavior: 'smooth' })}
+            className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold rounded-full transition-all duration-300 w-full sm:w-auto"
+            onClick={() => document.getElementById('guest-manual')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Lista de Presentes
+            Manual do Convidado
           </Button>
           <Button 
             variant="outline" 
             size="lg"
-            className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300"
-            onClick={() => document.getElementById('guest-manual')?.scrollIntoView({ behavior: 'smooth' })}
+            className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold rounded-full transition-all duration-300 w-full sm:w-auto"
+            onClick={() => document.getElementById('gifts')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Manual do Convidado
+            Lista de Presentes
           </Button>
         </div>
       </div>
