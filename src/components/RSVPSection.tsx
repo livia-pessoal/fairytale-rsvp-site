@@ -170,7 +170,7 @@ const RSVPSection = () => {
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
             <Heart className="h-8 w-8 text-primary sparkle-animation" />
-            <h2 className="text-4xl md:text-5xl font-bold text-gradient font-tangled">Confirmar Presença</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gradient">Confirmar Presença</h2>
             <Heart className="h-8 w-8 text-primary sparkle-animation" />
           </div>
           <p className="text-xl text-muted-foreground">

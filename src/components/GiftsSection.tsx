@@ -23,7 +23,7 @@ const GiftsSection = () => {
         <div className="text-center mb-12 sm:mb-16">
           <div className="flex items-center justify-center gap-2 sm:gap-3 mb-4">
             <Gift className="h-6 w-6 sm:h-8 sm:w-8 text-golden sparkle-animation" />
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gradient font-tangled">Lista de Presentes</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gradient">Lista de Presentes</h2>
             <Gift className="h-6 w-6 sm:h-8 sm:w-8 text-golden sparkle-animation" />
           </div>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground px-4">
