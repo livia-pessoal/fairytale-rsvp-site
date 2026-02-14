@@ -17,7 +17,7 @@ const FAMILIES = [
   { name: "Família Tia Miriam", members: ["Tia Miriam", "Tio Edmundo", "Camila", "Vitória", "André", "Iva", "Júnior", "Thamires"] },
   { name: "Família Jânio", members: ["Jânio", "Aparecida"] },
   { name: "Família Ricardo", members: ["Ricardo", "Penha", "Raphael"] },
-  { name: "Família Paulo", members: ["Paulo", "Edilaine", "Júlia", "Arthur"] },
+  { name: "Família Paulo", members: ["Paulo", "Edilane", "Júlia", "Arthur"] },
   { name: "Família Angela", members: ["Angela", "Eliésio", "José Augusto"] },
   { name: "Família Tia Letinha", members: ["Tia Letinha", "Tio Zé", "Alan", "Maria Vitória", "Luana"] },
   { name: "Família Tia Maria", members: ["Tia Maria", "Pereira", "Alberto", "Klarice"] },
