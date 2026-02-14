@@ -179,7 +179,7 @@ const RSVPSection = () => {
         </div>
 
         {/* RSVP Form */}
-        <Card className="shadow-2xl border-2 border-lavender/30 bg-white/95 backdrop-blur-sm">
+        <Card className="shadow-2xl border-2 border-lavender/30 bg-white/95 backdrop-blur-sm magical-hover">
           <CardHeader className="text-center pb-6">
             <CardTitle className="text-3xl font-bold text-primary">Reserve Sua Vaga</CardTitle>
             <CardDescription className="text-lg">
@@ -192,7 +192,7 @@ const RSVPSection = () => {
               {/* Name Field */}
               <div className="space-y-2">
                 <Label htmlFor="name" className="text-lg font-semibold flex items-center gap-2">
-                  <User className="h-5 w-5 text-primary" />
+                  <User className="h-5 w-5 text-primary sparkle-animation" />
                   Nome Completo
                 </Label>
                 <Input
@@ -208,7 +208,7 @@ const RSVPSection = () => {
 {/* Contact Field */}
               <div className="space-y-2">
                 <Label htmlFor="contact" className="text-lg font-semibold flex items-center gap-2">
-                  <Mail className="h-5 w-5 text-primary" />
+                  <Mail className="h-5 w-5 text-primary sparkle-animation" />
                   Contato (WhatsApp/Telefone)
                 </Label>
                 <Input
@@ -222,7 +222,7 @@ const RSVPSection = () => {
                                                                     {/* Family Selection */}
               <div className="space-y-2">
                 <Label htmlFor="family" className="text-lg font-semibold flex items-center gap-2">
-                  <Heart className="h-5 w-5 text-primary" />
+                  <Heart className="h-5 w-5 text-primary sparkle-animation" />
                   Sua Família
                 </Label>
                 <Select value={selectedFamily} onValueChange={handleFamilyChange} required>

@@ -3,10 +3,12 @@ import HeroSection from "@/components/HeroSection";
 import RSVPSection from "@/components/RSVPSection";
 import GiftsSection from "@/components/GiftsSection";
 import Footer from "@/components/Footer";
+import MagicalElements from "@/components/MagicalElements";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <MagicalElements />
       <Header />
       <main>
         <HeroSection />

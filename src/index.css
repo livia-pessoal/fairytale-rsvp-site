@@ -131,12 +131,58 @@ All colors MUST be HSL.
     50% { opacity: 1; transform: scale(1.1); }
   }
   
+  /* Gentle sway animation for flowers */
+  @keyframes sway {
+    0%, 100% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+  }
+  
+  /* Twinkle animation for stars */
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+  }
+  
+  /* Gentle pulse for magical elements */
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.6; filter: blur(8px); }
+    50% { opacity: 0.9; filter: blur(12px); }
+  }
+  
+  /* Fade in animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Shimmer effect */
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+  
   .float-animation {
     animation: float 3s ease-in-out infinite;
   }
   
   .sparkle-animation {
     animation: sparkle 2s ease-in-out infinite;
+  }
+  
+  .sway-animation {
+    animation: sway 4s ease-in-out infinite;
+  }
+  
+  .twinkle-animation {
+    animation: twinkle 3s ease-in-out infinite;
+  }
+  
+  .pulse-glow-animation {
+    animation: pulse-glow 4s ease-in-out infinite;
+  }
+  
+  .fade-in-animation {
+    animation: fadeIn 0.6s ease-out forwards;
   }
   
   /* Custom gradient backgrounds */
@@ -153,5 +199,27 @@ All colors MUST be HSL.
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  
+  /* Shimmer gradient for magical effects */
+  .shimmer-effect {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      hsl(var(--golden) / 0.3) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+  
+  /* Magical glow effect on hover */
+  .magical-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .magical-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px hsl(var(--primary) / 0.2), 0 4px 12px hsl(var(--golden) / 0.15);
   }
 }

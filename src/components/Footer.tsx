@@ -50,13 +50,13 @@ const Footer = () => {
 
         {/* Decorative Elements */}
         <div className="flex justify-center items-center gap-4 mb-8">
-          <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+          <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent shimmer-effect"></div>
           <div className="flex gap-2">
             <div className="w-2 h-2 bg-golden rounded-full sparkle-animation"></div>
             <div className="w-2 h-2 bg-primary rounded-full sparkle-animation" style={{ animationDelay: '0.5s' }}></div>
             <div className="w-2 h-2 bg-golden rounded-full sparkle-animation" style={{ animationDelay: '1s' }}></div>
           </div>
-          <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+          <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent shimmer-effect" style={{ animationDelay: '1.5s' }}></div>
         </div>
 
         {/* Quote */}

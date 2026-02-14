@@ -21,6 +21,11 @@ const HeroSection = () => {
         <div className="absolute top-40 right-1/3 w-6 h-6 bg-golden-glow rounded-full opacity-40 float-animation" style={{ animationDelay: '1s' }}></div>
         <div className="absolute top-60 left-1/2 w-3 h-3 bg-golden rounded-full opacity-70 float-animation" style={{ animationDelay: '2s' }}></div>
         <div className="absolute bottom-1/3 right-1/4 w-5 h-5 bg-golden rounded-full opacity-50 float-animation" style={{ animationDelay: '0.5s' }}></div>
+        
+        {/* Additional subtle sparkles */}
+        <div className="absolute top-1/3 left-1/3 w-2 h-2 bg-primary/30 rounded-full twinkle-animation" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute top-2/3 right-1/3 w-2 h-2 bg-golden/40 rounded-full twinkle-animation" style={{ animationDelay: '2.5s' }}></div>
+        <div className="absolute top-1/2 left-1/5 w-1.5 h-1.5 bg-primary/25 rounded-full twinkle-animation" style={{ animationDelay: '3s' }}></div>
       </div>
 
       {/* Main Content */}
