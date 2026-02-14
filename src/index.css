@@ -6,6 +6,15 @@
 All colors MUST be HSL.
 */
 
+/* Tangled Movie Font */
+@font-face {
+  font-family: 'Tangled';
+  src: url('./assets/tangled-font/Tangled-0jRv.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     /* Rapunzel Wedding Theme Colors */
