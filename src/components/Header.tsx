@@ -18,7 +18,7 @@ const Header = () => {
           {/* Logo/Names */}
           <div className="flex items-center space-x-2">
             <Heart className="h-5 w-5 sm:h-6 sm:w-6 text-primary sparkle-animation" />
-            <span className="text-lg sm:text-xl font-bold text-gradient font-tangled">Giovana & Bruno</span>
+            <span className="text-lg sm:text-xl font-bold text-gradient">Giovana & Bruno</span>
           </div>
 
           {/* Desktop Navigation */}

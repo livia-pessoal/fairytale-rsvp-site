@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start gap-2 sm:gap-3 mb-4">
               <Heart className="h-5 w-5 sm:h-6 sm:w-6 text-primary sparkle-animation" />
-              <h3 className="text-xl sm:text-2xl font-bold text-gradient font-tangled">Giovana & Bruno</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-gradient">Giovana & Bruno</h3>
             </div>
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed px-2 md:px-0">
               Celebrando nosso amor com as pessoas mais especiais das nossas vidas. 
