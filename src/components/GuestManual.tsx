@@ -8,7 +8,7 @@ const sections = [
     content: (
       <>
         <p className="text-base text-gray-700 leading-relaxed mb-3">
-          Nosso "sim" será em meio à natureza! O traje é o <strong>Sport Fino</strong>. Como o casamento será no campo, sugerimos que escolham calçados que tragam conforto.
+          Nosso "sim" será em meio à natureza! O traje é o <strong>Social</strong>. Como o casamento será no campo, sugerimos que escolham calçados que tragam conforto.
         </p>
         <div className="bg-primary/10 border-l-4 border-primary rounded-r-lg p-3">
           <p className="text-base text-gray-700 italic leading-relaxed">
