@@ -1,0 +1,242 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+/* Tangled Movie Font */
+@font-face {
+  font-family: 'Tangled';
+  src: url('./assets/tangled-font/Tangled-0jRv.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    /* Rapunzel Wedding Theme Colors */
+    --background: 0 0% 100%;
+    --foreground: 260 15% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 260 15% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 260 15% 25%;
+
+    /* Purple/Lavender Primary (Rapunzel's dress) */
+    --primary: 280 60% 55%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Light lavender secondary */
+    --secondary: 280 40% 92%;
+    --secondary-foreground: 260 15% 25%;
+
+    /* Golden accent (lanterns) */
+    --accent: 45 95% 65%;
+    --accent-foreground: 260 15% 25%;
+
+    /* Muted lavender */
+    --muted: 280 30% 95%;
+    --muted-foreground: 260 10% 50%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 280 25% 88%;
+    --input: 280 25% 94%;
+    --ring: 280 60% 55%;
+
+    /* Custom wedding colors */
+    --lavender: 280 60% 85%;
+    --deep-purple: 280 70% 45%;
+    --golden: 45 95% 65%;
+    --golden-glow: 45 100% 75%;
+    --soft-white: 0 0% 98%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-gradient-to-b from-purple-50/50 via-white to-purple-50/30 text-foreground min-h-screen;
+    font-family: 'Cardo', serif;
+    background-image: 
+      radial-gradient(circle at 20% 30%, hsl(var(--lavender) / 0.1) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, hsl(var(--golden) / 0.05) 0%, transparent 40%);
+  }
+
+  h1, h2 {
+    font-family: 'Great Vibes', cursive;
+  }
+}
+
+@layer components {
+  /* Magical floating animation for lanterns */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+  }
+  
+  @keyframes sparkle {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+  }
+  
+  /* Gentle sway animation for flowers */
+  @keyframes sway {
+    0%, 100% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+  }
+  
+  /* Twinkle animation for stars */
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+  }
+  
+  /* Gentle pulse for magical elements */
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.6; filter: blur(8px); }
+    50% { opacity: 0.9; filter: blur(12px); }
+  }
+  
+  /* Fade in animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Shimmer effect */
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+  
+  .float-animation {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .sparkle-animation {
+    animation: sparkle 2s ease-in-out infinite;
+  }
+  
+  .sway-animation {
+    animation: sway 4s ease-in-out infinite;
+  }
+  
+  .twinkle-animation {
+    animation: twinkle 3s ease-in-out infinite;
+  }
+  
+  .pulse-glow-animation {
+    animation: pulse-glow 4s ease-in-out infinite;
+  }
+  
+  .fade-in-animation {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  /* Custom gradient backgrounds */
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--deep-purple)));
+  }
+  
+  .gradient-golden {
+    background: linear-gradient(135deg, hsl(var(--golden)), hsl(var(--golden-glow)));
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0.3em 0.1em 0.3em 0.1em;
+    display: inline-block;
+    line-height: 1.3;
+  }
+  
+  /* Shimmer gradient for magical effects */
+  .shimmer-effect {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      hsl(var(--golden) / 0.3) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+  
+  /* Magical glow effect on hover */
+  .magical-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .magical-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px hsl(var(--primary) / 0.2), 0 4px 12px hsl(var(--golden) / 0.15);
+  }
+}

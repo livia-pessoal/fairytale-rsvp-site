@@ -1,0 +1,90 @@
+import { Calendar, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import heroImage from "@/assets/hero-wedding.jpg";
+
+const HeroSection = () => {
+  return (
+    <section id="home" className="relative min-h-screen flex items-center justify-center">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={heroImage}
+          alt="Magical wedding backdrop with lanterns"
+          className="w-full h-full object-cover opacity-30"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 via-transparent to-white/60"></div>
+      </div>
+
+      {/* Floating Lanterns Animation */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-1/4 w-4 h-4 bg-golden rounded-full opacity-60 float-animation"></div>
+        <div className="absolute top-40 right-1/3 w-6 h-6 bg-golden-glow rounded-full opacity-40 float-animation" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-60 left-1/2 w-3 h-3 bg-golden rounded-full opacity-70 float-animation" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-1/3 right-1/4 w-5 h-5 bg-golden rounded-full opacity-50 float-animation" style={{ animationDelay: '0.5s' }}></div>
+        
+        {/* Additional subtle sparkles */}
+        <div className="absolute top-1/3 left-1/3 w-2 h-2 bg-primary/30 rounded-full twinkle-animation" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute top-2/3 right-1/3 w-2 h-2 bg-golden/40 rounded-full twinkle-animation" style={{ animationDelay: '2.5s' }}></div>
+        <div className="absolute top-1/2 left-1/5 w-1.5 h-1.5 bg-primary/25 rounded-full twinkle-animation" style={{ animationDelay: '3s' }}></div>
+      </div>
+
+      {/* Main Content */}
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+        <div className="mb-8 overflow-visible">
+          <h1 className="text-5xl sm:text-7xl md:text-9xl font-script text-gradient mb-4 overflow-visible">
+            Giovana <span className="text-golden">&</span> Bruno
+          </h1>
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6 px-2">
+            Nosso Felizes Para Sempre Começa Aqui
+          </p>
+        </div>
+
+        {/* Wedding Date & Venue */}
+        <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 mb-8 shadow-lg border border-lavender/30">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 mb-4 md:mb-6">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <Calendar className="h-5 w-5 sm:h-6 sm:w-6 text-primary flex-shrink-0" />
+              <span className="text-base sm:text-lg md:text-xl font-semibold text-center">21 de Novembro de 2026</span>
+            </div>
+            <div className="flex items-center gap-2 sm:gap-3">
+              <MapPin className="h-4 w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
+              <span className="text-sm sm:text-base md:text-lg font-semibold">Mairiporã - SP</span>
+            </div>
+          </div>
+          
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground italic px-2">
+            "Porque o amor verdadeiro não tem fim, como as luzes das lanternas que iluminam nosso caminho."
+          </p>
+        </div>
+
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center flex-wrap px-2">
+          <Button 
+            size="lg" 
+            className="gradient-primary hover:scale-105 transition-all duration-300 px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold rounded-full shadow-lg w-full sm:w-auto"
+            onClick={() => document.getElementById('rsvp')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            Confirmar Presença
+          </Button>
+          <Button 
+            variant="outline" 
+            size="lg"
+            className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold rounded-full transition-all duration-300 w-full sm:w-auto"
+            onClick={() => document.getElementById('guest-manual')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            Manual do Convidado
+          </Button>
+          <Button 
+            variant="outline" 
+            size="lg"
+            className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold rounded-full transition-all duration-300 w-full sm:w-auto"
+            onClick={() => document.getElementById('gifts')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            Lista de Presentes
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;

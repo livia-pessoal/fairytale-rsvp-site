@@ -1,0 +1,45 @@
+export interface Family {
+  name: string;
+  members: string[];
+}
+
+export const FAMILIES: Family[] = [
+  { name: "Família Fátima", members: ["Fátima"] },
+  { name: "Família Tia Tereza", members: ["Tia Tereza", "Milena", "Dávila"] },
+  { name: "Família Eliene", members: ["Eliene", "João", "Guilherme", "Alice"] },
+  { name: "Família Tia Neuça", members: ["Tia Neuça", "Livia", "William", "Neuza"] },
+  { name: "Família Tia Miriam", members: ["Tia Miriam", "Camila", "Vitória", "André", "Iva", "Júnior"] },
+  { name: "Família Jânio", members: ["Jânio", "Aparecida"] },
+  { name: "Família Ricardo", members: ["Ricardo", "Penha", "Raphael"] },
+  { name: "Família Paulo", members: ["Paulo", "Edilane", "Júlia", "Arthur"] },
+  { name: "Família Angela", members: ["Angela", "Eliésio", "José Augusto"] },
+  { name: "Família Tia Letinha", members: ["Tia Letinha", "Tio Zé", "Alan", "Maria Vitória", "Luana"] },
+  { name: "Família Tia Maria", members: ["Tia Maria", "Pereira", "Alberto", "Klarice"] },
+  { name: "Família Auricélia", members: ["Auricélia", "Alan", "Fernando"] },
+  { name: "Família Ana Paula", members: ["Ana Paula", "Luan"] },
+  { name: "Família Tia Selma", members: ["Tia Selma", "Danilo", "Camila", "Nego"] },
+  { name: "Família Tia Elisangela", members: ["Tia Elisangela", "Mauro", "Paulinho", "Mariana", "Pedro", "Sarah"] },
+  { name: "Família Elaine", members: ["Elaine", "Maurício", "Matheus"] },
+  { name: "Família Tauane", members: ["Tauane", "Oswaldo", "Marcos", "Eliane", "Mariana"] },
+  { name: "Família Diana", members: ["Diana", "Paulo", "João", "Beatriz", "Gustavo"] },
+  { name: "Família Luana", members: ["Leonardo", "Kelli", "Luana", "Laura"] },
+  { name: "Família Tia Eliana", members: ["Eliana", "Reginaldo", "Guilherme"] },
+  { name: "Família Luiz Gustavo", members: ["Luiz Gustavo", "Sergio", "Cida", "Paloma", "Leonardo", "Margareth"] },
+  { name: "Família Silvania", members: ["Silvania", "Rivia", "Douglas", "Thalys", "Bianca", "Pedro"] },
+  { name: "Família Adriana", members: ["Adriana", "Fábio"] },
+  { name: "Família Flávia", members: ["Flávia", "Eduarda"] },
+  { name: "Família Geovanna G.", members: ["Geovana Galvino", "Danielle"] },
+  { name: "Família Breno", members: ["Breno", "Vanessa"] },
+  { name: "Família Geovanna B.", members: ["Geovanna Bonfim", "Thiago"] },
+  { name: "Família Edna", members: ["Edna", "Ronaldo", "Rayanne", "Henry"] },
+  { name: "Família Ana Júlia", members: ["Ana Júlia"] },
+  { name: "Família Josi", members: ["Josi", "Gabriel", "Thiago"] },
+
+  { name: "Família Renata", members: ["Renata", "Rogério"] },
+  { name: "Família Jefferson", members: ["Jefferson", "Benício"] },
+  { name: "Família Romualdo", members: ["Romualdo", "Neuma", "João", "Débora"] },
+  { name: "Família Tio Sinval", members: ["Tio Sinval", "Belinha", "Lucas", "Ícaro", "Isabella"] },
+  { name: "Família Ricardo Pinar", members: ["Ricardo", "Isabela"] },
+  { name: "Família Thamires", members: ["Thamires", "André"] },
+  { name: "Família Gabriela", members: ["Gabriela", "Marília"] },
+];
