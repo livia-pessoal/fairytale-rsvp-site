@@ -8,7 +8,7 @@ export const FAMILIES: Family[] = [
   { name: "Família Tia Tereza Mandú", members: ["Tia Tereza", "Milena", "Dávila"] },
   { name: "Família Eliene Gomes", members: ["Eliene", "João", "Guilherme", "Alice"] },
   { name: "Família Tia Neuça Pereira", members: ["Tia Neuça", "Livia", "William", "Neuza"] },
-  { name: "Família Tia Mirian Mandú", members: ["Tia Miriam", "Camila", "Vitória", "André", "Iva", "Júnior"] },
+  { name: "Família Tia Mirian Mandú", members: ["Tia Miriam", "Camila", "Vitória", "André", "Iva", "Júnior", "Gabriel"] },
   { name: "Família Jânio Mandú", members: ["Jânio", "Aparecida"] },
   { name: "Família Ricardo Mandú", members: ["Ricardo", "Penha", "Raphael"] },
   { name: "Família Paulo Mandú", members: ["Paulo", "Edilane", "Júlia", "Arthur"] },
@@ -31,7 +31,7 @@ export const FAMILIES: Family[] = [
   { name: "Família Geovanna Galvino", members: ["Geovanna", "Danielle"] },
   { name: "Família Geovanna Bonfim", members: ["Geovanna", "Thiago"] },
   { name: "Família Edna Silva", members: ["Edna", "Ronaldo", "Rayanne", "Henry"] },
-  { name: "Família Ana Julia Rocha", members: ["Ana Júlia"] },
+  { name: "Família Ana Julia Rocha", members: ["Ana Júlia", "Juliana", "Adaidas", "Miguel"] },
   { name: "Família Josi Menezes", members: ["Josi", "Gabriel", "Thiago"] },
 
   { name: "Família Renata Melo", members: ["Renata", "Rogério"] },
