@@ -29,7 +29,6 @@ export const FAMILIES: Family[] = [
   { name: "Família Adriana Menezes", members: ["Adriana", "Fábio"] },
   { name: "Família Flávia Menezes", members: ["Flávia", "Eduarda"] },
   { name: "Família Geovanna Galvino", members: ["Geovanna", "Danielle"] },
-  { name: "Família Breno", members: ["Breno", "Vanessa"] },
   { name: "Família Geovanna Bonfim", members: ["Geovanna", "Thiago"] },
   { name: "Família Edna Silva", members: ["Edna", "Ronaldo", "Rayanne", "Henry"] },
   { name: "Família Ana Julia Rocha", members: ["Ana Júlia"] },
